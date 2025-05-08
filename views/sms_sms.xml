@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sms_view_inherit" model="ir.ui.view">
+        <field name="name">sms.view.inherit.form</field>
+        <field name="model">sms.sms</field>
+        <field name="inherit_id" ref="sms.sms_tsms_view_form"/>
+        <field name="arch" type="xml">
+            <field name="state" position="after">
+                <field name="error_message" invisible="not error_message"/>
+            </field>
+        </field>
+    </record>
+</odoo>

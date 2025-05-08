@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_inherit_for_twilio" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.for.twilio</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <form position="inside">
+                <div class="app_settings_block" data-string="Twilio" data-key="ql_twilio_sms">
+                    <h2>Twilio SMS Settings</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box" id="twilio_settings">
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Twilio SMS Configuration</span>
+                                <div class="text-muted">
+                                    Configure Twilio SMS gateway to send SMS directly using Twilio
+                                </div>
+                                <div class="content-group mt16">
+                                    <div class="row mt16">
+                                        <label string="Account SID" for="twilio_account_sid" class="col-lg-3 o_light_label"/>
+                                        <field name="twilio_account_sid"/>
+                                    </div>
+                                    <div class="row mt16">
+                                        <label string="Auth Token" for="twilio_auth_token" class="col-lg-3 o_light_label"/>
+                                        <field name="twilio_auth_token" password="True"/>
+                                    </div>
+                                    <div class="row mt16">
+                                        <label string="From Number" for="twilio_from_number" class="col-lg-3 o_light_label"/>
+                                        <field name="twilio_from_number"/>
+                                    </div>
+                                    <div class="row mt16">
+                                        <label string="Overwrite Odoo SMS" for="twilio_overwrite_odoo_sms" class="col-lg-3 o_light_label"/>
+                                        <field name="twilio_overwrite_odoo_sms"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </field>
+    </record>
+</odoo>
